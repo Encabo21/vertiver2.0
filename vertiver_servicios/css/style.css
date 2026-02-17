@@ -343,6 +343,13 @@ section {
 /* Mobile Responsive */
 @media (max-width: 768px) {
 
+    html,
+    body {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+    }
+
     /* Hamburger Menu Logic */
     .mobile-toggle {
         display: flex;
@@ -393,14 +400,19 @@ section {
         height: 100vh;
         background: rgba(15, 23, 42, 0.98);
         backdrop-filter: blur(15px);
-        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.4s;
+        /* Add visibility transition */
         padding: 2rem;
         z-index: 1500;
         /* Below toggle button */
+        visibility: hidden;
+        /* Hide completely when closed */
     }
 
     .main-nav.active {
         right: 0;
+        visibility: visible;
+        /* Show when active */
     }
 
     .nav-links {
