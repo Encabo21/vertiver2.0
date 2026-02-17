@@ -247,33 +247,92 @@ li::before {
 
 /* Mobile Responsive */
 @media(max-width: 800px) {
+    body {
+        height: auto;
+        /* Allow scrolling on mobile */
+        overflow-y: auto;
+        /* Enable vertical scroll */
+        overflow-x: hidden;
+    }
+
     .container {
         flex-direction: column;
+        height: auto;
+        /* Container grows with content */
     }
 
     .split {
         width: 100%;
-        height: 50%;
+        height: auto;
+        /* Height based on content */
+        min-height: 50vh;
+        /* Ensure each section takes at least half screen */
+        padding: 4rem 1rem;
+        /* Add padding for breathing room */
+        background-attachment: scroll;
+        /* Fix background on mobile if needed */
     }
 
+    /* Reset width transitions/logic for mobile */
     .container.hover-left .left,
     .container.hover-left .right,
     .container.hover-right .left,
     .container.hover-right .right {
         width: 100%;
-        height: 50%;
     }
 
-    h1 {
-        font-size: 2.8rem;
+    .split::before {
+        backdrop-filter: blur(0);
+        /* Reduce performance cost on mobile */
+        background-color: rgba(0, 0, 0, 0.6);
+        /* Darker overlay for readability */
     }
 
-    h2 {
-        font-size: 1.4rem;
+    .split.left::before {
+        background: linear-gradient(135deg, rgba(6, 182, 212, 0.9) 0%, rgba(59, 130, 246, 0.7) 100%);
+    }
+
+    .split.right::before {
+        background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.9) 100%);
     }
 
     .content {
-        padding: 2rem;
+        padding: 2rem 1.5rem;
         width: 90%;
+        margin: 0 auto;
+        /* Center content */
+        max-width: none;
+        backdrop-filter: blur(8px);
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    li {
+        font-size: 1.1rem;
+        padding-left: 30px;
+    }
+
+    li::before {
+        font-size: 1.4rem;
+        line-height: 1.1rem;
+    }
+
+    .btn {
+        padding: 1rem 2rem;
+        width: 100%;
+        /* Full width buttons on mobile */
+        display: block;
+        text-align: center;
+        min-height: 48px;
+        /* Touch target size */
+        font-size: 0.9rem;
     }
 }

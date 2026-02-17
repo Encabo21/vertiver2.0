@@ -342,46 +342,152 @@ section {
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
+
+    /* Hamburger Menu Logic */
     .mobile-toggle {
         display: flex;
-        z-index: 1002;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        z-index: 2000;
+        /* Ensure on top of menu */
+        background: transparent;
+        border: none;
+        padding: 0;
     }
 
+    .bar {
+        width: 100%;
+        height: 3px;
+        background: #fff;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+
+    /* Animate hamburger to X when active (requires JS toggling .active on button) */
+    .mobile-toggle.active .bar:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .mobile-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-toggle.active .bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+
+    /* Navigation Overlay */
     .main-nav {
         flex-direction: column;
+        justify-content: center;
+        /* Center items vertically */
         position: fixed;
         top: 0;
         right: -100%;
-        width: 85%;
+        /* Hidden by default */
+        width: 100%;
+        /* Full screen width */
         height: 100vh;
         background: rgba(15, 23, 42, 0.98);
         backdrop-filter: blur(15px);
-        transition: right 0.4s ease;
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         padding: 2rem;
+        z-index: 1500;
+        /* Below toggle button */
     }
 
     .main-nav.active {
         right: 0;
     }
 
-    .hero h1 {
-        font-size: 2.5rem;
+    .nav-links {
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
     }
 
-    .bar {
-        width: 25px;
-        height: 2px;
-        background: #fff;
-        border-radius: 2px;
-        transition: all 0.3s ease;
+    .nav-links a {
+        font-size: 1.5rem;
+        /* Larger for touch */
+        display: block;
+        padding: 10px;
+    }
+
+    /* Global Layout Adjustments */
+    .services-grid,
+    .grid-3,
+    .grid-2 {
+        grid-template-columns: 1fr;
+        /* Stack columns */
+        padding: 0 1rem;
+        /* Ensure side padding */
+    }
+
+    section {
+        padding: 4rem 1rem;
+        /* Standardize section padding */
+    }
+
+    .hero {
+        height: auto;
+        min-height: 80vh;
+        padding-top: 100px;
+        /* Space for header */
+        padding-bottom: 50px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    /* Asesoría Specifics */
+    .hero-asesoria h1 {
+        font-size: 2.2rem;
+    }
+
+    .grid-tramites {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .tramite-item {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .segment-card .card-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Images */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Buttons */
+    .btn-primary,
+    .btn-asesoria {
+        width: 100%;
+        display: block;
+        padding: 1rem;
+        text-align: center;
+        min-height: 48px;
     }
 }
 
 .mobile-toggle {
     display: none;
-    background: none;
-    border: none;
     cursor: pointer;
-    flex-direction: column;
-    gap: 6px;
 }
