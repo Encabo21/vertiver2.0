@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertiver Asesoría | Particulares</title>
+    <meta name="description"
+        content="Asesoría para particulares. Renta, prestaciones, trámites de tráfico y gestiones con la administración pública.">
+
+    <!-- Google Fonts (Global + Specific) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../vertiver_servicios/css/style.css">
+
+    <!-- Custom Asesoría CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+
+    <!-- Global Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="../index.html" class="logo">VERTIVER</a>
+
+            <!-- Mobile Toggle -->
+            <button class="mobile-toggle" aria-label="Abrir menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Main Navigation -->
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="../vertiver_servicios/vertiver_servicios.html">Servicios</a></li>
+                    <li><a href="index.html" class="active">Asesoría</a></li>
+                    <li><a href="../trabaja_con_nosotros/index.html">Trabaja con nosotros</a></li>
+                    <li><a href="../el_grupo/index.html">El Grupo</a></li>
+                    <li><a href="../contacto/index.html">Contacto</a></li>
+                </ul>
+                <a href="#contacto" class="btn-header">Presupuesto Online</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Specific Hero Section -->
+    <section class="hero-asesoria"
+        style="min-height: 50vh; display: flex; align-items: center; justify-content: center;">
+        <div class="container hero-content">
+            <h1>Particulares</h1>
+            <p>Simplificamos tus gestiones diarias.</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div style="margin-bottom: 2rem;">
+                <a href="index.html" class="btn-asesoria" style="font-size: 0.9rem; padding: 8px 20px;"><i
+                        class="fas fa-arrow-left"></i> Volver a Asesoría</a>
+            </div>
+
+            <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;">Gestión de Trámites</h2>
+
+            <div class="grid-2"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+                <!-- AEAT -->
+                <div class="service-card-asesoria" style="text-align: left;">
+                    <div class="icon-wrapper"><i class="fas fa-file-invoice-dollar"></i></div>
+                    <h3>Agencia Tributaria (AEAT)</h3>
+                    <p>Confección y presentación de la Declaración de la Renta (IRPF). Contestación a requerimientos,
+                        aplazamientos de deudas y defensa ante inspecciones. Maximizamos tus devoluciones.</p>
+                </div>
+
+                <!-- Seguridad Social -->
+                <div class="service-card-asesoria" style="text-align: left;">
+                    <div class="icon-wrapper"><i class="fas fa-user-shield"></i></div>
+                    <h3>Seguridad Social</h3>
+                    <p>Altas, bajas y modificaciones. Solicitud de Vida Laboral, tramitación de pensiones (jubilación,
+                        viudedad), y gestión de empleadas de hogar. </p>
+                </div>
+
+                <!-- SEPE -->
+                <div class="service-card-asesoria" style="text-align: left;">
+                    <div class="icon-wrapper"><i class="fas fa-building"></i></div>
+                    <h3>Prestaciones SEPE</h3>
+                    <p>Asesoramiento y solicitud de prestaciones por desempleo, subsidios y ayudas extraordinarias. Te
+                        guiamos para obtener lo que te corresponde.</p>
+                </div>
+
+                <!-- DGT -->
+                <div class="service-card-asesoria" style="text-align: left;">
+                    <div class="icon-wrapper"><i class="fas fa-car"></i></div>
+                    <h3>Tráfico (DGT)</h3>
+                    <p>Cambios de titularidad de vehículos, duplicados de permisos, matriculaciones y canjes de carnet.
+                        Gestión de multas y recursos administrativos.</p>
+                </div>
+
+                <!-- Ayuntamientos -->
+                <div class="service-card-asesoria" style="text-align: left;">
+                    <div class="icon-wrapper"><i class="fas fa-city"></i></div>
+                    <h3>Ayuntamientos</h3>
+                    <p>Pago de tasas e impuestos municipales (IBI, IVTM). Gestión de Plusvalías municipales por herencia
+                        o venta. Solicitud de certificados de empadronamiento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer id="contacto" class="footer" style="background: #000; color: #94a3b8;">
+        <h2>¿Necesitas ayuda con un trámite?</h2>
+        <p>No pierdas tiempo en colas y burocracia.</p>
+        <a href="mailto:particulares@vertiver.com" class="btn-primary" style="margin-top: 20px;">Contactar con
+            Gestor</a>
+        <p style="margin-top: 40px; font-size: 0.9rem;">&copy; 2025 Grupo Vertiver. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Global Script -->
+    <script src="../vertiver_servicios/js/script.js"></script>
+    <script>
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const mainNav = document.querySelector('.main-nav');
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', () => {
+                mainNav.classList.toggle('active');
+                mobileToggle.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+
+</html>
