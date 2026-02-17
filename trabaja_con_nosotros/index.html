@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabaja con Nosotros | Vertiver</title>
+    <meta name="description"
+        content="Únete al equipo de Vertiver. Buscamos profesionales de limpieza, mantenimiento y jardinería comprometidos y serios.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+
+<body>
+
+    <!-- Global Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="../index.html" class="logo">VERTIVER</a>
+
+            <!-- Mobile Toggle -->
+            <button class="mobile-toggle" aria-label="Abrir menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Main Navigation -->
+            <nav class="main-nav">
+                <ul class="nav-links">
+
+                    <li><a href="../vertiver_servicios/vertiver_servicios.html#servicios">Servicios</a></li>
+                    <li><a href="../vertiver_asesoria/index.html">Asesoría</a></li>
+                    <li><a href="index.html">Trabaja con nosotros</a></li>
+                    <li><a href="../vertiver_servicios/vertiver_servicios.html#grupo">El Grupo</a></li>
+                    <li><a href="../contacto/index.html">Contacto</a></li>
+                </ul>
+                <a href="#formulario" class="btn-header">Enviar Candidatura</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Únete al equipo de VERTIVER.</h1>
+            <p>Buscamos profesionales comprometidos que quieran crecer en un entorno serio, con todas las garantías
+                legales y un equipo que te respalda.</p>
+            <a href="#formulario" class="btn-primary">Inscribirme ahora</a>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <h2>¿Por qué trabajar con nosotros?</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <h3>Seguridad Legal</h3>
+                <p>Olvida la incertidumbre. Ofrecemos contratos en regla desde el minuto uno, cotizando como
+                    corresponde.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Flexibilidad</h3>
+                <p>Gestionamos horarios y zonas para que puedas conciliar tu vida personal con el trabajo de forma
+                    efectiva.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Respeto Profesional</h3>
+                <p>Valoramos tu oficio. Formarás parte de un equipo donde el buen trabajo se reconoce y se premia.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form Section -->
+    <section id="formulario" class="application-form">
+        <div class="form-container">
+            <h2>Déjanos tus datos</h2>
+            <p>Rellena el siguiente formulario y da el primer paso hacia tu futuro en Vertiver.</p>
+
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="nombre">Nombre y Apellidos</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono de contacto</label>
+                    <input type="tel" id="telefono" name="telefono" required placeholder="Ej: 600 000 000">
+                </div>
+
+                <div class="form-group">
+                    <label for="area">Área de interés</label>
+                    <select id="area" name="area" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="limpieza">Limpieza</option>
+                        <option value="jardineria">Jardinería</option>
+                        <option value="pintura">Pintura</option>
+                        <option value="fontaneria">Fontanería</option>
+                        <option value="electricidad">Electricidad</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="experiencia">Experiencia previa</label>
+                    <textarea id="experiencia" name="experiencia" rows="4"
+                        placeholder="Cuéntanos brevemente tu experiencia en el sector..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="pregunta-clave">¿Qué es lo que más valoras de una empresa?</label>
+                    <input type="text" id="pregunta-clave" name="pregunta_clave"
+                        placeholder="Tu respuesta sincera nos ayuda a conocerte mejor">
+                </div>
+
+                <div class="form-submit">
+                    <button type="submit" class="btn-submit">Enviar Candidatura</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-note">
+        <p>Revisamos todas las solicitudes y nos pondremos en contacto contigo lo antes posible para una entrevista.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

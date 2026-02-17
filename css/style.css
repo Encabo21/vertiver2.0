@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;600;700&display=swap');
+
+:root {
+    /* New Futuristic Palette */
+    --bg-dark: #0f172a;
+    /* Slate 900 */
+    --bg-darker: #020617;
+    /* Slate 950 */
+    --text-primary: #f8fafc;
+    /* Slate 50 */
+    --text-secondary: #cbd5e1;
+    /* Slate 300 */
+    --accent-blue: #3b82f6;
+    /* Blue 500 */
+    --accent-cyan: #06b6d4;
+    /* Cyan 500 */
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    --left-bg-color: rgba(6, 182, 212, 0.7);
+    /* Cyan tint */
+    --right-bg-color: rgba(30, 41, 59, 0.85);
+    /* Slate tint */
+    --hover-width: 65%;
+    --other-width: 35%;
+    --speed: 800ms;
+    /* Slower, smoother transition */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background: var(--bg-darker);
+    color: var(--text-primary);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+/* Split Section Styling */
+.split {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: width var(--speed) cubic-bezier(0.4, 0, 0.2, 1);
+    /* Smoother easing */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.split.left {
+    background: url('../assets/servicios.png') center center no-repeat;
+    background-size: cover;
+}
+
+.split.right {
+    background: url('../assets/asesoria.png') center center no-repeat;
+    background-size: cover;
+}
+
+/* Overlays */
+.split::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: background-color var(--speed) ease;
+    z-index: 1;
+    backdrop-filter: blur(2px);
+    /* Slight blur on idle */
+}
+
+.split.left::before {
+    background-color: rgba(6, 182, 212, 0.8);
+    /* Cyan overlay */
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.8) 0%, rgba(59, 130, 246, 0.6) 100%);
+}
+
+.split.right::before {
+    background-color: rgba(15, 23, 42, 0.85);
+    /* Dark overlay */
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.8) 100%);
+}
+
+.split:hover::before {
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Darken slightly to let image pop */
+    backdrop-filter: blur(0px);
+    /* Clear blur on hover to see image details */
+}
+
+/* Hover Width Logic */
+.container.hover-left .left {
+    width: var(--hover-width);
+}
+
+.container.hover-left .right {
+    width: var(--other-width);
+}
+
+.container.hover-right .right {
+    width: var(--hover-width);
+}
+
+.container.hover-right .left {
+    width: var(--other-width);
+}
+
+/* Glass Content Card */
+.content {
+    position: relative;
+    z-index: 2;
+    padding: 3rem;
+    max-width: 600px;
+    width: 85%;
+    transition: transform var(--speed) ease, opacity var(--speed) ease;
+
+    /* Glassmorphism Effect */
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    box-shadow: var(--glass-shadow);
+}
+
+/* Typography */
+h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 700;
+    /* Subtle text glow */
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    color: var(--text-secondary);
+    letter-spacing: 2px;
+}
+
+/* Decorative Line under H2 */
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-cyan));
+    margin: 1rem auto 0;
+    border-radius: 2px;
+}
+
+ul {
+    list-style: none;
+    text-align: left;
+    display: inline-block;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+li {
+    font-size: 1.3rem;
+    margin: 12px 0;
+    padding-left: 35px;
+    position: relative;
+    color: var(--text-primary);
+    font-weight: 400;
+}
+
+li::before {
+    content: '›';
+    /* Minimalist arrow */
+    color: var(--accent-cyan);
+    position: absolute;
+    left: 0;
+    font-size: 1.8rem;
+    line-height: 1.2rem;
+    font-weight: 700;
+    text-shadow: 0 0 10px var(--accent-cyan);
+}
+
+/* Futuristic Button */
+.btn {
+    display: inline-block;
+    padding: 1.2rem 3.5rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    transition: all 0.4s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-cyan));
+    z-index: -1;
+    transition: width 0.4s ease;
+}
+
+.btn:hover {
+    border-color: transparent;
+    box-shadow: 0 0 25px rgba(6, 182, 212, 0.6);
+    /* Glow effect */
+    transform: translateY(-2px);
+}
+
+.btn:hover::before {
+    width: 100%;
+}
+
+/* Mobile Responsive */
+@media(max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .split {
+        width: 100%;
+        height: 50%;
+    }
+
+    .container.hover-left .left,
+    .container.hover-left .right,
+    .container.hover-right .left,
+    .container.hover-right .right {
+        width: 100%;
+        height: 50%;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .content {
+        padding: 2rem;
+        width: 90%;
+    }
+}

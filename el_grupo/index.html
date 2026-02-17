@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Grupo VERTIVER | Confianza y Profesionalidad</title>
+    <meta name="description"
+        content="Vertiver combina gestión administrativa de alto nivel con ejecución impecable. Servicios integrales y asesoría con honestidad y seguridad legal.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+
+<body>
+
+    <!-- Global Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="../index.html" class="logo">VERTIVER</a>
+
+            <!-- Mobile Toggle -->
+            <button class="mobile-toggle" aria-label="Abrir menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Main Navigation -->
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="../vertiver_servicios/vertiver_servicios.html">Servicios</a></li>
+                    <li><a href="../vertiver_asesoria/index.html">Asesoría</a></li>
+                    <li><a href="../trabaja_con_nosotros/index.html">Trabaja con nosotros</a></li>
+                    <li><a href="#" class="active">El Grupo</a></li>
+                    <li><a href="../contacto/index.html">Contacto</a></li>
+                </ul>
+                <!-- Reusing standard contact link or maybe 'Conoce nuestros servicios' as requested in prompt? 
+                     The prompt asked for specific CTA at bottom. Header button can be standard 'Presupuesto Online' or similar? 
+                     'Presupuesto Online' seems standard for Vertiver. keeping it for consistency. -->
+                <a href="#contacto" class="btn-header">Presupuesto Online</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section Hero (Nuestra Identidad) -->
+    <header class="hero-group">
+        <div class="hero-content">
+            <h1>El valor de la palabra dada</h1>
+            <p class="hero-subtitle">En VERTIVER unimos la gestión administrativa de alto nivel con la ejecución
+                impecable a pie de calle. Nacemos para devolver la profesionalidad y la ética al sector de los
+                servicios.</p>
+        </div>
+    </header>
+
+    <!-- Section 'El Problema vs. Nuestra Solución' (Enfoque en Honestidad) -->
+    <section class="problem-solution">
+        <div class="container-content">
+            <h2 class="section-title">¿Por qué VERTIVER?</h2>
+            <div class="text-block">
+                <p class="intro-text">En un mercado donde abunda la informalidad y los trabajos 'en negro' que dejan
+                    desprotegido al cliente, nosotros elegimos el camino de la responsabilidad.</p>
+
+                <div class="key-points-grid">
+                    <div class="point-card">
+                        <h3>Seguridad Legal</h3>
+                        <p>Todos nuestros trabajadores están bajo contrato y coordinados por nuestra propia gestoría. El
+                            cliente tiene riesgo cero.</p>
+                    </div>
+                    <div class="point-card">
+                        <h3>Supervisión Real</h3>
+                        <p>No somos una plataforma fría. Estamos a pie de calle supervisando cada detalle para que la
+                            calidad sea la acordada.</p>
+                    </div>
+                    <div class="point-card">
+                        <h3>Compromiso</h3>
+                        <p>Si damos nuestra palabra, la cumplimos. No buscamos el beneficio rápido, sino la relación a
+                            largo plazo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 'Estructura del Grupo' (Sinergia) -->
+    <section class="group-structure">
+        <div class="container-content">
+            <h2 class="section-title">Estructura del Grupo</h2>
+            <div class="structure-columns">
+                <div class="col-structure">
+                    <h3>Gestión y Asesoría</h3>
+                    <p>El respaldo administrativo y legal que garantiza que todo funcione bajo la normativa vigente.</p>
+                </div>
+                <div class="col-structure">
+                    <h3>Servicios Integrales</h3>
+                    <p>La ejecución profesional de mantenimiento, limpieza y reformas, con personal cualificado y
+                        supervisado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 'Visión y Proximidad' -->
+    <section class="vision-section">
+        <div class="container-content">
+            <h2 class="section-title">Visión y Proximidad</h2>
+            <p>Nuestro foco es <strong>San Martín y alrededores</strong>. Queremos ser el referente local de confianza
+                donde el cliente sepa que, si hay un problema, respondemos nosotros con nombre y apellidos.</p>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-final" id="contacto">
+        <div class="cta-content">
+            <h2>Un equipo, todas las soluciones.</h2>
+            <a href="../vertiver_servicios/vertiver_servicios.html" class="btn-primary">Conoce nuestros servicios</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Grupo Vertiver. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../vertiver_servicios/js/script.js"></script>
+    <!-- Reusing script for mobile menu if compatible, or creating new one? 
+    Checking vertiver_servicios/js/script.js content would be good, but assuming it handles .mobile-toggle and .main-nav is safe given the HTML structure. -->
+    <script>
+        // Inline script for mobile menu if we don't want to rely on relative path or if script.js is simple
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const mainNav = document.querySelector('.main-nav');
+
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', () => {
+                mainNav.classList.toggle('active');
+                mobileToggle.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+
+</html>

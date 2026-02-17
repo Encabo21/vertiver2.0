@@ -1,0 +1,184 @@
+/* Custom Styles for Vertiver Asesoría */
+
+/* Force Light Theme Base for this section */
+body {
+    background-color: #F4F4F9;
+    /* Soft Gray */
+    color: #333333;
+    /* Dark Gray */
+}
+
+/* Typography Overrides for "Formal" feel */
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Playfair Display', serif;
+    /* Keep Serif for titles as requested */
+    color: #0A2463;
+    /* Deep Blue title color */
+}
+
+/* Header Adjustments for Light Background Compatibility (if needed) */
+/* Global header is dark/translucent so it should work fine over light content too, 
+   but let's ensure text visibility if it overlaps light sections */
+
+/* Hero Section Specifics */
+.hero-asesoria {
+    /* Different background for Asesoría */
+    background: linear-gradient(135deg, rgba(10, 36, 99, 0.95) 0%, rgba(62, 146, 204, 0.8) 100%), url('../../assets/office-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 160px 0 100px;
+    /* Account for fixed header */
+    text-align: center;
+}
+
+.hero-asesoria h1 {
+    color: #ffffff;
+    /* White text on dark hero */
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-asesoria p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    max-width: 800px;
+    margin: 0 auto 2.5rem;
+    color: #e0e0e0;
+}
+
+/* Core Services - Light Background */
+.bg-light {
+    background-color: #ffffff;
+}
+
+.service-card-asesoria {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    /* Soft shadow */
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.service-card-asesoria:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(10, 36, 99, 0.1);
+}
+
+.service-card-asesoria .icon-wrapper {
+    color: #0A2463;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Tramites Grid */
+.grid-tramites {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tramite-item {
+    background: #ffffff;
+    padding: 15px 30px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    color: #0A2463;
+    font-weight: 500;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tramite-item:hover {
+    border-color: #3E92CC;
+    transform: translateY(-2px);
+}
+
+.tramite-item i {
+    color: #3E92CC;
+}
+
+/* Specialized Segments - Dark Blue Section */
+.bg-dark-blue {
+    background-color: #0A2463;
+    color: #ffffff;
+}
+
+.section-title.text-white {
+    color: #ffffff;
+}
+
+.segment-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    color: #333;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.segment-card .card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.segment-card .card-header i {
+    font-size: 2rem;
+    color: #0A2463;
+}
+
+.segment-card .card-header h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #0A2463;
+}
+
+/* Highlight Card (2nd Chance Law) */
+.highlight-card {
+    background: #eff6ff;
+    /* Very light blue */
+    border: 2px solid #3E92CC;
+}
+
+.highlight-card .card-header i {
+    color: #3E92CC;
+}
+
+/* Reset Global CSS conflicts if any */
+.container {
+    /* Ensure container behaves well with global styles */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Button Overrides */
+.btn-asesoria {
+    background-color: #3E92CC;
+    color: #ffffff;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-asesoria:hover {
+    background-color: #2c7bb0;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(62, 146, 204, 0.4);
+}
