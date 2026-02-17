@@ -19,6 +19,7 @@ if (mobileToggle) {
     mobileToggle.addEventListener('click', () => {
         mainNav.classList.toggle('active');
         mobileToggle.classList.toggle('active');
+        document.body.classList.toggle('menu-open'); // Toggle overlay effect
 
         // Animate hamburger to X (optional, needs CSS support but toggling class helps)
     });
@@ -30,8 +31,12 @@ dropdowns.forEach(dropdown => {
     if (toggle) {
         toggle.addEventListener('click', (e) => {
             if (window.innerWidth <= 768) {
-                e.preventDefault();
-                dropdown.classList.toggle('active');
+                // Check if it's a link, not a dropdown toggle
+                if (!this.classList.contains('dropdown-toggle')) {
+                    mainNav.classList.remove('active');
+                    mobileToggle.classList.remove('active');
+                    document.body.classList.remove('menu-open');
+                }
             }
         });
     }
@@ -42,5 +47,6 @@ document.addEventListener('click', (e) => {
     if (!mainNav.contains(e.target) && !mobileToggle.contains(e.target)) {
         mainNav.classList.remove('active');
         mobileToggle.classList.remove('active');
+        document.body.classList.remove('menu-open');
     }
 });
