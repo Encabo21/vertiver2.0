@@ -460,11 +460,25 @@ section {
         /* Stack columns */
         padding: 0 1rem;
         /* Ensure side padding */
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    /* Enforce 100% width on all major containers */
+    .container,
+    .hero,
+    .services-section,
+    .quality-content,
+    .footer {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden;
     }
 
     section {
-        padding: 4rem 1rem;
-        /* Standardize section padding */
+        padding: 4rem 1.25rem;
+        /* Increased side padding to 20px (1.25rem) */
     }
 
     .hero {
@@ -521,7 +535,42 @@ section {
     }
 }
 
-.mobile-toggle {
+/* Explicitly style .mobile-toggle as requested (30px, contrast, z-index) */
+.mobile-toggle,
+.hamburger-menu {
     display: none;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+    .mobile-toggle,
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        z-index: 9999;
+        /* Force high z-index */
+        background: transparent;
+        border: none;
+        padding: 0;
+        position: fixed;
+        /* Fixed position as requested */
+        top: 25px;
+        right: 25px;
+    }
+
+    /* Ensure bars are high contrast */
+    .bar,
+    .hamburger-menu span {
+        width: 100%;
+        height: 3px;
+        background: #fff;
+        /* White for contrast on dark header */
+        border-radius: 3px;
+        transition: all 0.3s ease;
+        display: block;
+    }
 }
