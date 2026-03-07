@@ -78,6 +78,26 @@ h4 {
     margin-bottom: 20px;
 }
 
+/* 4-Card Responsive Grid */
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+@media (max-width: 991px) {
+    .grid-4 {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-4 {
+        grid-template-columns: 1fr;
+        padding: 0 20px; /* Margen lateral en móviles */
+    }
+}
+
 /* Tramites Grid */
 .grid-tramites {
     display: flex;
@@ -125,6 +145,27 @@ h4 {
     padding: 30px;
     color: #333;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    height: 100%; /* Ensure cards have the same height if wrapped in links */
+}
+
+.segment-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3);
+}
+
+/* Link Wrapper for Cards */
+.segment-link {
+    text-decoration: none !important;
+    color: inherit !important;
+    display: block;
+    transition: none;
+}
+
+.segment-link:hover {
+    text-decoration: none !important;
+    color: inherit !important;
 }
 
 .segment-card .card-header {

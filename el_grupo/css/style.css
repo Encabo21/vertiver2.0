@@ -225,29 +225,34 @@ section {
 }
 
 
-/* Group Structure (Gradient Dark -> Light) */
+/* Group Structure (Dark Solid - No Gradient) */
 .group-structure {
-    background: linear-gradient(180deg, #1e293b 0%, #1e293b 50%, rgba(30, 41, 59, 0) 100%);
+    background: #0f172a;
     color: #ecf3f8;
 }
 
 .group-structure .section-title {
     color: #fff;
+    text-align: center;
 }
 
 .structure-columns {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 3rem;
-    flex-wrap: wrap;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 4rem auto;
     padding: 0 2rem;
 }
 
+.structure-link {
+    text-decoration: none !important;
+    color: inherit !important;
+    display: block;
+}
+
 .col-structure {
-    flex: 1;
-    min-width: 300px;
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 3.5rem;
     border-radius: 24px;
@@ -255,20 +260,12 @@ section {
     position: relative;
     overflow: hidden;
     transition: all 0.4s ease;
-}
-
-.col-structure::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background: linear-gradient(90deg, var(--accent-blue), var(--accent-cyan));
+    cursor: pointer;
+    height: 100%;
 }
 
 .col-structure:hover {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.08);
     transform: translateY(-5px);
 }
 
@@ -281,6 +278,11 @@ section {
 .col-structure p {
     font-size: 1.2rem;
     color: #cbd5e1;
+}
+
+/* Remove gradient bar */
+.col-structure::before {
+    display: none;
 }
 
 
@@ -380,7 +382,8 @@ section {
     }
 
     .structure-columns {
-        flex-direction: column;
+        grid-template-columns: 1fr; /* Stack on mobile */
+        gap: 2rem;
     }
 
     .bar {
