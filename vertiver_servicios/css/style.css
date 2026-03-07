@@ -303,7 +303,7 @@ section {
 /* Quality Seal */
 .quality-seal {
     width: 100%;
-    background: linear-gradient(180deg, #0f172a 0%, #0f172a 87%, rgba(15, 23, 42, 0) 100%);
+    background: #0f172a;
     padding-bottom: 8rem;
     display: flex;
     align-items: center;
